@@ -20,7 +20,11 @@ const MotionBox = motion(Box);
 const Navbar = ({ shouldShow }) => {
   return (
     <MotionBox
-      animate={{ opacity: shouldShow ? 1 : 0 }}
+      animate={{
+        opacity: shouldShow ? 1 : 0,
+        scale: shouldShow ? 1 : 0
+      }}
+      transition={{ duration: 0.5 }}
       initial={{ opacity: 0 }}
       w="100%"
       position="fixed"
