@@ -2,11 +2,6 @@ import { Box, Stack } from '@chakra-ui/react';
 
 import Skill from './skill';
 
-import nextThumb from '../public/images/next.png';
-import jsThumb from '../public/images/javascript.png';
-import pythonThumb from '../public/images/python.png';
-import cppThumb from '../public/images/c++.png';
-
 const SkillsList = ({}) => (
   <Box w="100%">
     <Stack spacing={30}>

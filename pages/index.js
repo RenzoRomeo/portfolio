@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import { Box, SimpleGrid, Heading } from '@chakra-ui/react';
 import { Container } from '@chakra-ui/react';
 
-import SkillsList from '../components/skillslist';
 import Navbar from '../components/navbar';
 import Presentation from '../components/presentation';
 import Section from '../components/section';
@@ -73,13 +72,6 @@ export default function Home() {
             Animi, quod sunt similique laborum dolorum doloribus quasi fuga
             nesciunt. Ipsam, soluta!
           </Box>
-        </Section>
-
-        <Section id="skills">
-          <Heading as="h1" mb={20} fontSize={50}>
-            Skills
-          </Heading>
-          <SkillsList />
         </Section>
 
         <Section id="projects">
