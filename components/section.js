@@ -6,15 +6,19 @@ const StyledDiv = chakra(motion.div, {
     shouldForwardProp(prop) || ['transition'].includes(prop)
 });
 
-const Section = ({ children, delay = 0, ...props }) => (
+const Section = ({ children, delay = 0.3, from = 'top', ...props }) => (
   <StyledDiv
     initial="hidden"
     whileInView="visible"
     w="100%"
     viewport={{ once: true }}
     variants={{
-      visible: { opacity: 1, y: 0 },
-      hidden: { opacity: 0, y: -20 }
+      visible: { opacity: 1, y: 0, x: 0 },
+      hidden: {
+        opacity: 0,
+        y: from === 'bottom' ? 20 : from === 'top' ? -20 : 0,
+        x: from === 'left' ? -20 : from === 'right' ? 20 : 0
+      }
     }}
     transition={{ duration: 0.5, delay }}
     align="center"

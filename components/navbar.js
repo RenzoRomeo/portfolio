@@ -22,18 +22,19 @@ const Navbar = ({ shouldShow }) => {
     <MotionBox
       animate={{
         opacity: shouldShow ? 1 : 0,
-        scale: shouldShow ? 1 : 0
+        scaleY: shouldShow ? 1 : 0
       }}
       transition={{ duration: 0.5 }}
       initial={{ opacity: 0 }}
       w="100%"
       position="fixed"
+      display="flex"
       as="nav"
       zIndex={1}
     >
       <Container
         maxW="container.lg"
-        bg={{ base: '', md: 'blackAlpha.200' }}
+        bg={{ base: '', md: 'blackAlpha.900' }}
         style={{ base: '', md: { backdropFilter: 'blur(10px)' } }}
         py={5}
         align="center"
@@ -87,7 +88,7 @@ const Navbar = ({ shouldShow }) => {
           </Menu>
         </Box>
       </Container>
-      <Box align="right" p={5} position="fixed" zIndex={1} top={3} right={2}>
+      <Box p={5} display="inline-block">
         <ToggleTheme />
       </Box>
     </MotionBox>

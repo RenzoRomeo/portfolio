@@ -9,8 +9,9 @@ import Presentation from '../components/presentation';
 import Section from '../components/section';
 import Project from '../components/project';
 
-import thumb from '../public/images/renzo.jpg';
 import BackToTop from '../components/backtotop';
+
+import thumb from '../public/images/noimage.png';
 
 export default function Home() {
   const [shouldShow, setShouldShow] = useState(false);
@@ -46,7 +47,7 @@ export default function Home() {
         </Head>
 
         <SimpleGrid columns={[1, 1, 2]}>
-          <Section id="about">
+          <Section id="about" from="left">
             <Heading as="h1" mb={20} fontSize={50}>
               About Me
             </Heading>
@@ -79,7 +80,7 @@ export default function Home() {
             </Box>
           </Section>
 
-          <Section id="skills">
+          <Section id="skills" from="right">
             <Heading as="h1" mb={50} fontSize={50}>
               Skills
             </Heading>

@@ -7,7 +7,7 @@ import HoverBox from './hoverbox';
 const BackToTop = ({ shouldShow }) => (
   <Box w="100%" align="right" p={5} position="fixed" bottom={2} right={2}>
     <HoverBox
-      animate={{ opacity: shouldShow ? 1 : 0 }}
+      animate={{ opacity: shouldShow ? 1 : 0, scale: shouldShow ? 1 : 0 }}
       initial={{ opacity: 0 }}
       onClick={() => animateScroll.scrollToTop()}
       w={16}
