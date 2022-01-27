@@ -14,22 +14,18 @@ import BackToTop from '../components/backtotop';
 
 export default function Home() {
   const [shouldShow, setShouldShow] = useState(false);
-  const [yPos, setYPos] = useState(0);
+
+  const handleScroll = () => {
+    const yPos = window.scrollY;
+    setShouldShow(yPos > 500);
+  };
 
   useEffect(() => {
-    const handleScroll = () => {
-      const yPos = window.scrollY;
-      setYPos(yPos);
-    };
-
     window.addEventListener('scroll', handleScroll, false);
-
-    setShouldShow(yPos > 500);
-
     return () => {
       window.removeEventListener('scroll', handleScroll, false);
     };
-  }, [yPos]);
+  }, []);
 
   return (
     <Box
