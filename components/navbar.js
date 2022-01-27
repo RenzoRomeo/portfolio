@@ -6,7 +6,8 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  IconButton
+  IconButton,
+  useColorModeValue
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { motion } from 'framer-motion';
@@ -24,7 +25,7 @@ const Navbar = ({ shouldShow }) => {
         opacity: shouldShow ? 1 : 0,
         scaleY: shouldShow ? 1 : 0
       }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.2 }}
       initial={{ opacity: 0 }}
       w="100%"
       position="fixed"
@@ -34,7 +35,10 @@ const Navbar = ({ shouldShow }) => {
     >
       <Container
         maxW="container.lg"
-        bg={{ base: '', md: 'blackAlpha.900' }}
+        bg={{
+          base: '',
+          md: useColorModeValue('whiteAlpha.900', 'blackAlpha.900')
+        }}
         style={{ base: '', md: { backdropFilter: 'blur(10px)' } }}
         py={5}
         align="center"
@@ -63,7 +67,11 @@ const Navbar = ({ shouldShow }) => {
           </HoverBox>
         </Stack>
 
-        <Box display={{ base: 'inline-block', md: 'none' }} alignSelf="right">
+        <Box
+          w="100%"
+          display={{ base: 'inline-block', md: 'none' }}
+          align="left"
+        >
           <Menu>
             <MenuButton
               as={IconButton}
