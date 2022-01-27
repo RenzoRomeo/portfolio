@@ -11,7 +11,6 @@ import Project from '../components/project';
 
 import thumb from '../public/images/renzo.jpg';
 import BackToTop from '../components/backtotop';
-import ToggleTheme from '../components/toggleTheme';
 
 export default function Home() {
   const [shouldShow, setShouldShow] = useState(false);
@@ -41,18 +40,6 @@ export default function Home() {
       )}
       py={15}
     >
-      <Box
-        w="100%"
-        align="right"
-        p={5}
-        position="fixed"
-        zIndex={2}
-        top={2}
-        right={2}
-      >
-        <ToggleTheme />
-      </Box>
-
       <Navbar shouldShow={shouldShow} />
 
       <Presentation id="presentation" />

@@ -13,6 +13,7 @@ import { motion } from 'framer-motion';
 
 import SmoothLink from './smoothlink';
 import HoverBox from './hoverbox';
+import ToggleTheme from './toggleTheme';
 
 const MotionBox = motion(Box);
 
@@ -30,7 +31,6 @@ const Navbar = ({ shouldShow }) => {
         maxW="container.lg"
         bg={{ base: '', md: 'blackAlpha.200' }}
         style={{ base: '', md: { backdropFilter: 'blur(10px)' } }}
-        my={5}
         py={5}
         align="center"
         w="100%"
@@ -82,8 +82,10 @@ const Navbar = ({ shouldShow }) => {
             </MenuList>
           </Menu>
         </Box>
-
       </Container>
+      <Box align="right" p={5} position="fixed" zIndex={1} top={3} right={2}>
+        <ToggleTheme />
+      </Box>
     </MotionBox>
   );
 };
