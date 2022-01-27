@@ -7,7 +7,6 @@ import {
   MenuList,
   MenuItem,
   IconButton,
-  useColorModeValue
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { motion } from 'framer-motion';
@@ -30,6 +29,7 @@ const Navbar = ({ shouldShow }) => {
       w="100%"
       position="fixed"
       display="flex"
+      style={{ backdropFilter: 'blur(10px)' }}
       as="nav"
       zIndex={1}
     >
@@ -37,7 +37,7 @@ const Navbar = ({ shouldShow }) => {
         maxW="container.lg"
         bg={{
           base: '',
-          md: useColorModeValue('whiteAlpha.900', 'blackAlpha.900')
+          md: '' /* useColorModeValue('whiteAlpha.900', 'blackAlpha.900') */
         }}
         style={{ base: '', md: { backdropFilter: 'blur(10px)' } }}
         py={5}

@@ -35,7 +35,7 @@ export default function Home() {
         'linear(to-t, #7F7FD5, #86A8E7, #91EAE4)',
         'linear(to-b, #0f0c29, #302b63, #24243e)'
       )}
-      py={15}
+      pb={15}
     >
       <Navbar shouldShow={shouldShow} />
 
