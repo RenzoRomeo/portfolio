@@ -10,6 +10,7 @@ const Section = ({ children, delay = 0, ...props }) => (
   <StyledDiv
     initial="hidden"
     whileInView="visible"
+    w="100%"
     viewport={{ once: true }}
     variants={{
       visible: { opacity: 1, y: 0 },
