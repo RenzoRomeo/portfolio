@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
-import { Box, SimpleGrid, Heading } from '@chakra-ui/react';
+import { Box, SimpleGrid, Heading, useColorModeValue } from '@chakra-ui/react';
 import { Container } from '@chakra-ui/react';
 
 import SkillsList from '../components/skillslist';
@@ -11,6 +11,7 @@ import Project from '../components/project';
 
 import thumb from '../public/images/renzo.jpg';
 import BackToTop from '../components/backtotop';
+import ToggleTheme from '../components/toggleTheme';
 
 export default function Home() {
   const [shouldShow, setShouldShow] = useState(false);
@@ -32,7 +33,26 @@ export default function Home() {
   }, [yPos]);
 
   return (
-    <Box w="100%" bgGradient="linear(to-b, #0f0c29, #302b63, #24243e)" py={15}>
+    <Box
+      w="100%"
+      bgGradient={useColorModeValue(
+        'linear(to-t, #7F7FD5, #86A8E7, #91EAE4)',
+        'linear(to-b, #0f0c29, #302b63, #24243e)'
+      )}
+      py={15}
+    >
+      <Box
+        w="100%"
+        align="right"
+        p={5}
+        position="fixed"
+        zIndex={2}
+        top={2}
+        right={2}
+      >
+        <ToggleTheme />
+      </Box>
+
       <Navbar shouldShow={shouldShow} />
 
       <Presentation id="presentation" />

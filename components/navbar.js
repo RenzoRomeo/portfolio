@@ -1,4 +1,14 @@
-import { Box, Container, Stack } from '@chakra-ui/react';
+import {
+  Box,
+  Container,
+  Stack,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  IconButton
+} from '@chakra-ui/react';
+import { HamburgerIcon } from '@chakra-ui/icons';
 import { motion } from 'framer-motion';
 
 import SmoothLink from './smoothlink';
@@ -18,15 +28,18 @@ const Navbar = ({ shouldShow }) => {
     >
       <Container
         maxW="container.lg"
-        bg="blackAlpha.200"
-        style={{ backdropFilter: 'blur(10px)' }}
+        bg={{ base: '', md: 'blackAlpha.200' }}
+        style={{ base: '', md: { backdropFilter: 'blur(10px)' } }}
         my={5}
         py={5}
         align="center"
+        w="100%"
+        justifyContent="space-around"
         borderRadius={10}
       >
         <Stack
           direction={{ base: 'column', md: 'row' }}
+          display={{ base: 'none', md: 'flex' }}
           justify="space-between"
           px={5}
           fontSize={25}
@@ -44,6 +57,32 @@ const Navbar = ({ shouldShow }) => {
             <SmoothLink section="contact">Contact Me</SmoothLink>
           </HoverBox>
         </Stack>
+
+        <Box display={{ base: 'inline-block', md: 'none' }} alignSelf="right">
+          <Menu>
+            <MenuButton
+              as={IconButton}
+              icon={<HamburgerIcon />}
+              variant="outline"
+              aria-label="sections"
+            ></MenuButton>
+            <MenuList>
+              <SmoothLink section="about">
+                <MenuItem>About</MenuItem>
+              </SmoothLink>
+              <SmoothLink section="skills">
+                <MenuItem>Skills</MenuItem>
+              </SmoothLink>
+              <SmoothLink section="projects">
+                <MenuItem>Projects</MenuItem>
+              </SmoothLink>
+              <SmoothLink section="contact">
+                <MenuItem>Contact</MenuItem>
+              </SmoothLink>
+            </MenuList>
+          </Menu>
+        </Box>
+
       </Container>
     </MotionBox>
   );
