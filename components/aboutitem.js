@@ -1,9 +1,10 @@
-import { Box, Flex, Image, Text } from '@chakra-ui/react';
+import { Box, Flex, Text } from '@chakra-ui/react';
+import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
 import { motion } from 'framer-motion';
 
 const MotionBox = motion(Box);
 
-const AboutItem = ({ side, imageName, children }) => (
+const AboutItem = ({ side, children }) => (
   <MotionBox
     initial="hidden"
     whileInView="visible"
@@ -20,17 +21,13 @@ const AboutItem = ({ side, imageName, children }) => (
       justify="space-between"
       flexDir={{ base: 'column', md: side === 'left' ? 'row' : 'row-reverse' }}
       px={50}
+      py={6}
     >
-      <Image
-        w={125}
-        h={125}
-        p={2}
-        borderWidth={2}
-        borderColor="whiteAlpha.900"
-        src={`/images/${imageName}.png`}
-        alt={imageName}
-        borderRadius="full"
-      />
+      {side === 'right' ? (
+        <ChevronLeftIcon boxSize={75} color="green.500" />
+      ) : (
+        <ChevronRightIcon boxSize={75} color="green.500" />
+      )}
       <Text align="center">{children}</Text>
     </Flex>
   </MotionBox>
