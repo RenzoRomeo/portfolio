@@ -68,16 +68,16 @@ export default function Home() {
                 bg="blackAlpha.200"
               >
                 <AboutItem side="left" imageName="noimage">
-                  I am 20 years old
+                  I study Software Engineering at UNMDP &#40;2020 - 2025&#41;
+                </AboutItem>
+                <AboutItem side="right" imageName="noimage">
+                  I started programming in 2019
+                </AboutItem>
+                <AboutItem side="left" imageName="noimage">
+                  I was born on december 2001
                 </AboutItem>
                 <AboutItem side="right" imageName="noimage">
                   I am from Argentina
-                </AboutItem>
-                <AboutItem side="left" imageName="noimage">
-                  I started programming in 2019
-                </AboutItem>
-                <AboutItem side="right" imageName="noimage">
-                  I study Software Engineering at UNMDP &#40;2020 - 2025&#41;
                 </AboutItem>
               </Stack>
             </Box>
