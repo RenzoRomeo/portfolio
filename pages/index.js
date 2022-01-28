@@ -107,46 +107,22 @@ export default function Home() {
               title="Spotify Clone"
               thumbnail={spotifyThumb}
               repo="spotify-clone"
-            >
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum,
-              quaerat quam vel sed eos ut est porro soluta error aspernatur
-              ipsam. In vel suscipit labore totam delectus, optio quam dicta? Ab
-              esse neque quasi inventore similique dolores earum, laudantium
-              obcaecati, hic, aut nostrum minima adipisci totam? Ullam facere
-              nesciunt vel.
-            </Project>
-            <Project title="Hulu Clone" thumbnail={huluThumb} repo="hulu-clone">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum,
-              quaerat quam vel sed eos ut est porro soluta error aspernatur
-              ipsam. In vel suscipit labore totam delectus, optio quam dicta? Ab
-              esse neque quasi inventore similique dolores earum, laudantium
-              obcaecati, hic, aut nostrum minima adipisci totam? Ullam facere
-              nesciunt vel.
-            </Project>
+            ></Project>
             <Project
-              title="Asteroids clone"
+              title="Hulu Clone"
+              thumbnail={huluThumb}
+              repo="hulu-clone"
+            ></Project>
+            <Project
+              title="Asteroids Clone"
               thumbnail={asteroidsThumb}
               repo="asteroids"
-            >
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum,
-              quaerat quam vel sed eos ut est porro soluta error aspernatur
-              ipsam. In vel suscipit labore totam delectus, optio quam dicta? Ab
-              esse neque quasi inventore similique dolores earum, laudantium
-              obcaecati, hic, aut nostrum minima adipisci totam? Ullam facere
-              nesciunt vel.
-            </Project>
+            ></Project>
             <Project
               title="Raycaster"
               thumbnail={raycasterThumb}
               repo="raycaster"
-            >
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum,
-              quaerat quam vel sed eos ut est porro soluta error aspernatur
-              ipsam. In vel suscipit labore totam delectus, optio quam dicta? Ab
-              esse neque quasi inventore similique dolores earum, laudantium
-              obcaecati, hic, aut nostrum minima adipisci totam? Ullam facere
-              nesciunt vel.
-            </Project>
+            ></Project>
           </SimpleGrid>
         </Section>
 

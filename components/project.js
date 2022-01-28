@@ -22,7 +22,7 @@ const Project = ({ title, thumbnail, repo, children }) => (
 
         <Box p={6} align="center">
           <Box display="flex" flexDir="column">
-            <Box fontSize={25} fontWeight="bold" pb={7}>
+            <Box fontSize={30} fontWeight="bold">
               {title}
             </Box>
             <Box fontSize={15} textAlign="justify">
