@@ -1,12 +1,6 @@
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
-import {
-  Box,
-  SimpleGrid,
-  Heading,
-  Stack,
-  useColorModeValue
-} from '@chakra-ui/react';
+import { Box, SimpleGrid, Stack, useColorModeValue } from '@chakra-ui/react';
 import { Container } from '@chakra-ui/react';
 
 import SkillsList from '../components/skillslist';
@@ -14,6 +8,7 @@ import Navbar from '../components/navbar';
 import Presentation from '../components/presentation';
 import Section from '../components/section';
 import Project from '../components/project';
+import Title from '../components/title';
 
 import BackToTop from '../components/backtotop';
 import AboutItem from '../components/aboutitem';
@@ -58,9 +53,7 @@ export default function Home() {
 
         <SimpleGrid columns={[1, 1, 2]}>
           <Section id="about" from="left">
-            <Heading as="h1" mb={20} fontSize={50}>
-              About Me
-            </Heading>
+            <Title>About Me</Title>
 
             <Box width="100%">
               <Stack
@@ -68,7 +61,7 @@ export default function Home() {
                 borderRadius={10}
                 align="center"
                 textAlign="justify"
-                spacing={20}
+                py={5}
                 fontSize={25}
                 bg="blackAlpha.200"
               >
@@ -89,17 +82,17 @@ export default function Home() {
           </Section>
 
           <Section id="skills" from="right">
-            <Heading as="h1" mb={20} fontSize={50}>
+            <Title as="h1" mb={20} fontSize={50}>
               Skills
-            </Heading>
+            </Title>
             <SkillsList />
           </Section>
         </SimpleGrid>
 
         <Section id="projects">
-          <Heading as="h1" fontSize={50} mb={20}>
+          <Title as="h1" fontSize={50} mb={20}>
             Projects
-          </Heading>
+          </Title>
 
           <SimpleGrid
             columns={[1, 1, 2]}
@@ -156,9 +149,9 @@ export default function Home() {
         </Section>
 
         <Section id="contact">
-          <Heading as="h1" mb={20} fontSize={50}>
+          <Title as="h1" mb={20} fontSize={50} >
             Contact Me
-          </Heading>
+          </Title>
         </Section>
       </Container>
 

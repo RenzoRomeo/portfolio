@@ -14,7 +14,6 @@ const AboutItem = ({ side, imageName, children }) => (
       hidden: { opacity: 0, x: side === 'left' ? -20 : 20 }
     }}
     transition={{ duration: 0.5, delay: 0.5 }}
-    py={3}
   >
     <Flex
       align="center"

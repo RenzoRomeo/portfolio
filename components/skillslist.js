@@ -1,9 +1,9 @@
-import { Box, Stack, Text } from '@chakra-ui/react';
+import { Box, SimpleGrid, Text } from '@chakra-ui/react';
 import Skillbox from './skillbox';
 
 const SkillsList = ({}) => (
   <Box boxSize="fit-content">
-    <Stack spacing={20}>
+    <SimpleGrid columns={{ base: 1, md: 2 }} spacing={20}>
       <Skillbox title="Frontend">
         <Text>NextJS</Text>
         <Text>ReactJS</Text>
@@ -23,7 +23,7 @@ const SkillsList = ({}) => (
         <Text>Python &#40;Scripting/Scraping&#41;</Text>
         <Text>C / C++</Text>
       </Skillbox>
-    </Stack>
+    </SimpleGrid>
   </Box>
 );
 
