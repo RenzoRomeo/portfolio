@@ -2,7 +2,7 @@ import { Box, Stack, Text } from '@chakra-ui/react';
 import Skillbox from './skillbox';
 
 const SkillsList = ({}) => (
-  <Box w="100%">
+  <Box boxSize="fit-content">
     <Stack spacing={20}>
       <Skillbox title="Frontend">
         <Text>NextJS</Text>
