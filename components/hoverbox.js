@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 
 const MotionBox = motion(Box);
 
-const HoverBox = ({ children, ...props }) => {
+const HoverBox = ({ children, scale = 1.2, ...props }) => {
   return (
     <MotionBox
-      whileHover={{ scale: 1.2, transition: { duration: 0.25 } }}
+      whileHover={{ scale, transition: { duration: 0.25 } }}
       cursor="pointer"
       {...props}
     >
