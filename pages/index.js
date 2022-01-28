@@ -11,7 +11,10 @@ import Project from '../components/project';
 
 import BackToTop from '../components/backtotop';
 
-import thumb from '../public/images/noimage.png';
+import huluThumb from '../public/images/projects/hulu.png';
+import spotifyThumb from '../public/images/projects/spotify.png';
+import asteroidsThumb from '../public/images/projects/asteroids.png';
+import raycasterThumb from '../public/images/projects/raycaster.png';
 
 export default function Home() {
   const [shouldShow, setShouldShow] = useState(false);
@@ -52,7 +55,7 @@ export default function Home() {
               About Me
             </Heading>
 
-            <Box p={5} align="center" textAlign="justify">
+            <Box p={5} pt={0} align="center" textAlign="justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
               aperiam repudiandae dolore inventore natus laudantium delectus.
               Obcaecati eligendi voluptas, non repudiandae numquam ad debitis
@@ -81,7 +84,7 @@ export default function Home() {
           </Section>
 
           <Section id="skills" from="right">
-            <Heading as="h1" mb={50} fontSize={50}>
+            <Heading as="h1" mb={20} fontSize={50}>
               Skills
             </Heading>
             <SkillsList />
@@ -94,7 +97,7 @@ export default function Home() {
           </Heading>
 
           <SimpleGrid columns={[1, 1, 2]} spacing={10}>
-            <Project title="Test" thumbnail={thumb}>
+            <Project title="Spotify Clone" thumbnail={spotifyThumb}>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum,
               quaerat quam vel sed eos ut est porro soluta error aspernatur
               ipsam. In vel suscipit labore totam delectus, optio quam dicta? Ab
@@ -102,7 +105,7 @@ export default function Home() {
               obcaecati, hic, aut nostrum minima adipisci totam? Ullam facere
               nesciunt vel.
             </Project>
-            <Project title="Test" thumbnail={thumb}>
+            <Project title="Hulu Clone" thumbnail={huluThumb}>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum,
               quaerat quam vel sed eos ut est porro soluta error aspernatur
               ipsam. In vel suscipit labore totam delectus, optio quam dicta? Ab
@@ -110,7 +113,7 @@ export default function Home() {
               obcaecati, hic, aut nostrum minima adipisci totam? Ullam facere
               nesciunt vel.
             </Project>
-            <Project title="Test" thumbnail={thumb}>
+            <Project title="Asteroids clone" thumbnail={asteroidsThumb}>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum,
               quaerat quam vel sed eos ut est porro soluta error aspernatur
               ipsam. In vel suscipit labore totam delectus, optio quam dicta? Ab
@@ -118,7 +121,7 @@ export default function Home() {
               obcaecati, hic, aut nostrum minima adipisci totam? Ullam facere
               nesciunt vel.
             </Project>
-            <Project title="Test" thumbnail={thumb}>
+            <Project title="Primitive Raycaster" thumbnail={raycasterThumb}>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum,
               quaerat quam vel sed eos ut est porro soluta error aspernatur
               ipsam. In vel suscipit labore totam delectus, optio quam dicta? Ab
