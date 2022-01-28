@@ -55,7 +55,7 @@ export default function Home() {
               About Me
             </Heading>
 
-            <Box p={5} pt={0} align="center" textAlign="justify">
+            <Box py={5} pt={0} align="center" textAlign="justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
               aperiam repudiandae dolore inventore natus laudantium delectus.
               Obcaecati eligendi voluptas, non repudiandae numquam ad debitis
