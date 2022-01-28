@@ -51,18 +51,18 @@ const Navbar = ({ shouldShow }) => {
           display={{ base: 'none', md: 'flex' }}
           justify="space-between"
           px={5}
-          fontSize={25}
+          fontSize={22}
         >
-          <HoverBox fontWeight="bold">
+          <HoverBox>
             <SmoothLink section="about">About Me</SmoothLink>
           </HoverBox>
-          <HoverBox fontWeight="bold">
+          <HoverBox>
             <SmoothLink section="skills">Skills</SmoothLink>
           </HoverBox>
-          <HoverBox fontWeight="bold">
+          <HoverBox>
             <SmoothLink section="projects">Projects</SmoothLink>
           </HoverBox>
-          <HoverBox fontWeight="bold">
+          <HoverBox>
             <SmoothLink section="contact">Contact Me</SmoothLink>
           </HoverBox>
         </Stack>
