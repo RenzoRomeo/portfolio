@@ -20,7 +20,7 @@ const SkillsList = ({}) => (
       </Skillbox>
 
       <Skillbox title="Programming">
-        <Text>Python &#40;Scripting / Scraping&#41;</Text>
+        <Text>Python &#40;Scripting/Scraping&#41;</Text>
         <Text>C / C++</Text>
       </Skillbox>
     </Stack>

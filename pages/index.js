@@ -1,6 +1,12 @@
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
-import { Box, SimpleGrid, Heading, useColorModeValue } from '@chakra-ui/react';
+import {
+  Box,
+  SimpleGrid,
+  Heading,
+  Stack,
+  useColorModeValue
+} from '@chakra-ui/react';
 import { Container } from '@chakra-ui/react';
 
 import SkillsList from '../components/skillslist';
@@ -10,6 +16,7 @@ import Section from '../components/section';
 import Project from '../components/project';
 
 import BackToTop from '../components/backtotop';
+import AboutItem from '../components/aboutitem';
 
 import huluThumb from '../public/images/projects/hulu.png';
 import spotifyThumb from '../public/images/projects/spotify.png';
@@ -55,31 +62,29 @@ export default function Home() {
               About Me
             </Heading>
 
-            <Box py={5} pt={0} align="center" textAlign="justify">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              aperiam repudiandae dolore inventore natus laudantium delectus.
-              Obcaecati eligendi voluptas, non repudiandae numquam ad debitis
-              rem nobis? Quidem, cupiditate sit inventore, fuga deleniti, illo
-              voluptatibus autem eaque fugit cumque labore eveniet non odio sint
-              voluptatum odit rem. Laborum mollitia ea tempora ullam labore vel
-              aspernatur veniam ex provident, quas magnam sequi libero velit
-              eaque eveniet quasi, necessitatibus facilis quaerat aut. Et cumque
-              laudantium nobis repellendus voluptatem hic tempore accusamus
-              voluptates corrupti. Tempora natus cupiditate consequuntur
-              incidunt illo repudiandae nisi voluptatum ad obcaecati nulla non
-              ab officiis, tempore quia ducimus veniam. Nemo nostrum qui
-              accusamus pariatur, explicabo neque quod eligendi non quam iusto
-              tempora error odit. Cupiditate vitae nam dignissimos fugit maxime,
-              quasi excepturi, illum ratione aut perspiciatis reprehenderit
-              eaque quam velit labore, nemo sint doloremque! Unde ipsa autem
-              quasi omnis explicabo officiis, illum suscipit reprehenderit eum,
-              nam labore temporibus voluptates enim quam vitae hic eveniet
-              blanditiis ullam recusandae dolores ratione magni. Nesciunt ad
-              veritatis accusantium necessitatibus similique ex rerum quasi odit
-              aliquid molestiae voluptatum optio perspiciatis aliquam qui
-              repudiandae tempora atque quibusdam, non provident sapiente iste
-              nemo doloribus blanditiis. Animi, quod sunt similique laborum
-              dolorum doloribus quasi fuga nesciunt. Ipsam, soluta!
+            <Box width="100%">
+              <Stack
+                h="100%"
+                borderRadius={10}
+                align="center"
+                textAlign="justify"
+                spacing={20}
+                fontSize={25}
+                bg="blackAlpha.200"
+              >
+                <AboutItem side="left" imageName="noimage">
+                  I am 20 years old
+                </AboutItem>
+                <AboutItem side="right" imageName="noimage">
+                  I am from Argentina
+                </AboutItem>
+                <AboutItem side="left" imageName="noimage">
+                  I started programming in 2019
+                </AboutItem>
+                <AboutItem side="right" imageName="noimage">
+                  I study Software Engineering at UNMDP &#40;2020 - 2025&#41;
+                </AboutItem>
+              </Stack>
             </Box>
           </Section>
 
@@ -96,7 +101,13 @@ export default function Home() {
             Projects
           </Heading>
 
-          <SimpleGrid columns={[1, 1, 2]} spacing={10}>
+          <SimpleGrid
+            columns={[1, 1, 2]}
+            spacing={10}
+            bg="blackAlpha.200"
+            p={10}
+            borderRadius={15}
+          >
             <Project
               title="Spotify Clone"
               thumbnail={spotifyThumb}

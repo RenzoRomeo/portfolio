@@ -4,12 +4,12 @@ import { CheckCircleIcon } from '@chakra-ui/icons';
 import HoverBox from './hoverbox';
 
 const Skillbox = ({ title, children }) => (
-  <Box bg="blackAlpha.200" borderRadius={10} px={20} py={5}>
+  <Box bg="blackAlpha.200" borderRadius={10} px={10} py={5}>
     <Text as="h1" fontWeight="bold" fontSize={25} pb={5}>
       {title}
     </Text>
     <Box>
-      <Stack spacing={1} direction="column" pl={5}>
+      <Stack spacing={1.5} direction="column">
         {children.map((item, i) => (
           <HoverBox key={i}>
             <Stack direction="row" align="center">
