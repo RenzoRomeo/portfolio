@@ -51,8 +51,8 @@ export default function Home() {
           <title>Renzo Romeo</title>
         </Head>
 
-        <SimpleGrid columns={[1, 1, 2]}>
-          <Section id="about" from="left">
+        <SimpleGrid columns={[1, 1, 2]} boxSize="fit-content">
+          <Section id="about" from="left" h="100%">
             <Title>About Me</Title>
 
             <Box width="100%">
@@ -61,7 +61,9 @@ export default function Home() {
                 borderRadius={10}
                 align="center"
                 textAlign="justify"
-                py={5}
+                py={10}
+                px={5}
+                spacing={{ base: 20, md: 5 }}
                 fontSize={25}
                 bg="blackAlpha.200"
               >
@@ -81,7 +83,7 @@ export default function Home() {
             </Box>
           </Section>
 
-          <Section id="skills" from="right">
+          <Section id="skills" from="right" h="100%">
             <Title as="h1" mb={20} fontSize={50}>
               Skills
             </Title>
@@ -149,7 +151,7 @@ export default function Home() {
         </Section>
 
         <Section id="contact">
-          <Title as="h1" mb={20} fontSize={50} >
+          <Title as="h1" mb={20} fontSize={50}>
             Contact Me
           </Title>
         </Section>
