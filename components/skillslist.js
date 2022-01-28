@@ -3,7 +3,7 @@ import Skillbox from './skillbox';
 
 const SkillsList = ({}) => (
   <Box w="100%">
-    <Stack spacing={30}>
+    <Stack spacing={20}>
       <Skillbox title="Frontend">
         <Text>NextJS</Text>
         <Text>ReactJS</Text>
@@ -22,11 +22,6 @@ const SkillsList = ({}) => (
         <Text>Python</Text>
         <Text>C / C++</Text>
       </Skillbox>
-
-      {/*       <Skill title="Python" side="left" />
-      <Skill title="NextJS" side="right" />
-      <Skill title="C++" side="left" />
-      <Skill title="Javascript" side="right" /> */}
     </Stack>
   </Box>
 );
