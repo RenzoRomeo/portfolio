@@ -36,7 +36,7 @@ export default function Home() {
       w="100%"
       bgGradient={useColorModeValue(
         'linear(to-t, #7F7FD5, #86A8E7, #91EAE4)',
-        'linear(to-b, #0f0c29, #302b63, #24243e)'
+        'linear(to-b, #0f0c29, #302b63)'
       )}
       pb={15}
     >
@@ -97,7 +97,11 @@ export default function Home() {
           </Heading>
 
           <SimpleGrid columns={[1, 1, 2]} spacing={10}>
-            <Project title="Spotify Clone" thumbnail={spotifyThumb}>
+            <Project
+              title="Spotify Clone"
+              thumbnail={spotifyThumb}
+              repo="spotify-clone"
+            >
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum,
               quaerat quam vel sed eos ut est porro soluta error aspernatur
               ipsam. In vel suscipit labore totam delectus, optio quam dicta? Ab
@@ -105,7 +109,7 @@ export default function Home() {
               obcaecati, hic, aut nostrum minima adipisci totam? Ullam facere
               nesciunt vel.
             </Project>
-            <Project title="Hulu Clone" thumbnail={huluThumb}>
+            <Project title="Hulu Clone" thumbnail={huluThumb} repo="hulu-clone">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum,
               quaerat quam vel sed eos ut est porro soluta error aspernatur
               ipsam. In vel suscipit labore totam delectus, optio quam dicta? Ab
@@ -113,7 +117,11 @@ export default function Home() {
               obcaecati, hic, aut nostrum minima adipisci totam? Ullam facere
               nesciunt vel.
             </Project>
-            <Project title="Asteroids clone" thumbnail={asteroidsThumb}>
+            <Project
+              title="Asteroids clone"
+              thumbnail={asteroidsThumb}
+              repo="asteroids"
+            >
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum,
               quaerat quam vel sed eos ut est porro soluta error aspernatur
               ipsam. In vel suscipit labore totam delectus, optio quam dicta? Ab
@@ -121,7 +129,11 @@ export default function Home() {
               obcaecati, hic, aut nostrum minima adipisci totam? Ullam facere
               nesciunt vel.
             </Project>
-            <Project title="Primitive Raycaster" thumbnail={raycasterThumb}>
+            <Project
+              title="Raycaster"
+              thumbnail={raycasterThumb}
+              repo="raycaster"
+            >
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum,
               quaerat quam vel sed eos ut est porro soluta error aspernatur
               ipsam. In vel suscipit labore totam delectus, optio quam dicta? Ab

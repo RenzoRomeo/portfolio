@@ -13,13 +13,14 @@ const SkillsList = ({}) => (
 
       <Skillbox title="Backend">
         <Text>NodeJS</Text>
+        <Text>Python &#40;DJango&#41;</Text>
         <Text>ExpressJS</Text>
         <Text>MongoDB</Text>
-        <Text>PostreSQL</Text>
+        <Text>PostgreSQL</Text>
       </Skillbox>
 
       <Skillbox title="Programming">
-        <Text>Python</Text>
+        <Text>Python &#40;Scripting / Scraping&#41;</Text>
         <Text>C / C++</Text>
       </Skillbox>
     </Stack>

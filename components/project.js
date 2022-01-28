@@ -1,11 +1,14 @@
-import NextLink from 'next/link';
 import Image from 'next/image';
 import { Box, LinkBox, useColorModeValue } from '@chakra-ui/react';
 
 import HoverBox from './hoverbox';
 
-const Project = ({ title, thumbnail, children }) => (
-  <NextLink href="https://github.com/RenzoRomeo" passHref>
+const Project = ({ title, thumbnail, repo, children }) => (
+  <a
+    href={`https://github.com/RenzoRomeo/${repo}`}
+    target="_blank"
+    rel="noreferrer"
+  >
     <LinkBox cursor="pointer">
       <HoverBox
         scale={1.05}
@@ -29,7 +32,7 @@ const Project = ({ title, thumbnail, children }) => (
         </Box>
       </HoverBox>
     </LinkBox>
-  </NextLink>
+  </a>
 );
 
 export default Project;
