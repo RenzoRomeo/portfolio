@@ -1,22 +1,18 @@
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
-import { Box, SimpleGrid, Stack, useColorModeValue } from '@chakra-ui/react';
+import { Box, SimpleGrid, useColorModeValue } from '@chakra-ui/react';
 import { Container } from '@chakra-ui/react';
 
+import About from '../components/about';
 import SkillsList from '../components/skillslist';
+import Projects from '../components/projects';
+import Contact from '../components/contact';
 import Navbar from '../components/navbar';
 import Presentation from '../components/presentation';
 import Section from '../components/section';
-import Project from '../components/project';
 import Title from '../components/title';
 
 import BackToTop from '../components/backtotop';
-import AboutItem from '../components/aboutitem';
-
-import huluThumb from '../public/images/projects/hulu.png';
-import spotifyThumb from '../public/images/projects/spotify.png';
-import asteroidsThumb from '../public/images/projects/asteroids.png';
-import raycasterThumb from '../public/images/projects/raycaster.png';
 
 export default function Home() {
   const [shouldShow, setShouldShow] = useState(false);
@@ -54,33 +50,7 @@ export default function Home() {
         <SimpleGrid columns={[1, 1, 2]} boxSize="fit-content">
           <Section id="about" from="left" h="100%">
             <Title>About Me</Title>
-
-            <Box width="100%">
-              <Stack
-                h="100%"
-                borderRadius={10}
-                align="center"
-                textAlign="justify"
-                py={10}
-                px={5}
-                spacing={{ base: 20, md: 5 }}
-                fontSize={25}
-                bg="blackAlpha.200"
-              >
-                <AboutItem side="left" imageName="noimage">
-                  I study Software Engineering at UNMDP &#40;2020 - 2025&#41;
-                </AboutItem>
-                <AboutItem side="right" imageName="noimage">
-                  I started programming in 2019
-                </AboutItem>
-                <AboutItem side="left" imageName="noimage">
-                  I was born on december 2001
-                </AboutItem>
-                <AboutItem side="right" imageName="noimage">
-                  I am from Argentina
-                </AboutItem>
-              </Stack>
-            </Box>
+            <About />
           </Section>
 
           <Section id="skills" from="right" h="100%">
@@ -95,42 +65,14 @@ export default function Home() {
           <Title as="h1" fontSize={50} mb={20}>
             Projects
           </Title>
-
-          <SimpleGrid
-            columns={[1, 1, 2]}
-            spacing={10}
-            bg="blackAlpha.200"
-            p={10}
-            pb={5}
-            borderRadius={15}
-          >
-            <Project
-              title="Spotify Clone"
-              thumbnail={spotifyThumb}
-              repo="spotify-clone"
-            ></Project>
-            <Project
-              title="Hulu Clone"
-              thumbnail={huluThumb}
-              repo="hulu-clone"
-            ></Project>
-            <Project
-              title="Asteroids Clone"
-              thumbnail={asteroidsThumb}
-              repo="asteroids"
-            ></Project>
-            <Project
-              title="Raycaster"
-              thumbnail={raycasterThumb}
-              repo="raycaster"
-            ></Project>
-          </SimpleGrid>
+          <Projects />
         </Section>
 
         <Section id="contact">
           <Title as="h1" mb={20} fontSize={50}>
             Contact Me
           </Title>
+          <Contact />
         </Section>
       </Container>
 
