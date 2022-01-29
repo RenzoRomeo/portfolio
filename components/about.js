@@ -16,16 +16,16 @@ const About = () => (
       bg="blackAlpha.200"
     >
       <AboutItem side="left" imageName="noimage">
-        I study Software Engineering at UNMDP &#40;2020 - 2025&#41;
+        2021 - Became a freelance full-stack developer.
       </AboutItem>
       <AboutItem side="right" imageName="noimage">
-        I started programming in 2019
+        2020 - Started studying Software Engineering at UNMDP &#40;2025&#41;
       </AboutItem>
       <AboutItem side="left" imageName="noimage">
-        I was born on december 2001
+        2019 - Started Programming.
       </AboutItem>
       <AboutItem side="right" imageName="noimage">
-        I am from Argentina
+        2001 - Born in Mar del Plata, Argentina.
       </AboutItem>
     </Stack>
   </Box>
