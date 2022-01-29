@@ -24,7 +24,7 @@ const SkillsList = ({}) => (
       <Text>Javascript</Text>
     </Skillbox>
 
-    <Skillbox title="DevOps">
+    <Skillbox title="Other Tools">
       <Text>AWS</Text>
       <Text>Docker</Text>
       <Text>Azure</Text>

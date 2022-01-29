@@ -6,7 +6,7 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  IconButton,
+  IconButton
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { motion } from 'framer-motion';
@@ -32,12 +32,13 @@ const Navbar = ({ shouldShow }) => {
       style={{ backdropFilter: 'blur(10px)' }}
       as="nav"
       zIndex={1}
+      ml={10}
     >
       <Container
-        maxW="container.lg"
+        maxW="container.xl"
         bg={{
           base: '',
-          md: '' /* useColorModeValue('whiteAlpha.900', 'blackAlpha.900') */
+          md: ''
         }}
         style={{ base: '', md: { backdropFilter: 'blur(10px)' } }}
         py={5}
