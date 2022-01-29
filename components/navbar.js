@@ -68,7 +68,7 @@ const Navbar = ({ shouldShow }) => {
         </Stack>
 
         <Box
-          w="100%"
+          w="100vw"
           display={{ base: 'inline-block', md: 'none' }}
           align="right"
         >

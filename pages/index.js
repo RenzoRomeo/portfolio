@@ -1,10 +1,6 @@
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
-import {
-  Box,
-  SimpleGrid,
-  useColorModeValue,
-} from '@chakra-ui/react';
+import { Box, SimpleGrid, useColorModeValue } from '@chakra-ui/react';
 import { Container } from '@chakra-ui/react';
 
 import About from '../components/about';
@@ -35,22 +31,25 @@ export default function Home() {
 
   return (
     <Box
-      w={{ base: 'container.md', md: '100vw' }}
       bgGradient={useColorModeValue(
         'linear(to-t, #7F7FD5, #86A8E7, #91EAE4)',
         'linear(to-b, #0f0c29, #302b63)'
       )}
       pb={15}
     >
+      <Head>
+        <title>Renzo Romeo</title>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        ></meta>
+      </Head>
+
       <Navbar shouldShow={shouldShow} />
 
       <Presentation id="presentation" />
 
       <Container maxW="container.xl" align="center">
-        <Head>
-          <title>Renzo Romeo</title>
-        </Head>
-
         <SimpleGrid columns={[1, 1, 2]} boxSize="fit-content">
           <Section id="about" from="left" h="100%">
             <Title>About Me</Title>
