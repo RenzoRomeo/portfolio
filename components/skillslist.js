@@ -4,15 +4,15 @@ import Skillbox from './skillbox';
 const SkillsList = ({}) => (
   <SimpleGrid columns={{ base: 1, md: 2 }} spacing={20}>
     <Skillbox title="Frontend">
-      <Text>NextJS</Text>
       <Text>ReactJS</Text>
       <Text>ChakraUI</Text>
+      <Text>Styled Comp.</Text>
       <Text>TailwindCSS</Text>
     </Skillbox>
 
     <Skillbox title="Backend">
+      <Text>NextJS</Text>
       <Text>NodeJS</Text>
-      <Text>ExpressJS</Text>
       <Text>MongoDB</Text>
       <Text>PostgreSQL</Text>
     </Skillbox>
