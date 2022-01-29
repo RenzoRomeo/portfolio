@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Icon, useMediaQuery } from '@chakra-ui/react';
+import { Box, Flex, Text, Icon, useBreakpoint } from '@chakra-ui/react';
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
@@ -9,8 +9,6 @@ import { motion } from 'framer-motion';
 const MotionBox = motion(Box);
 
 const AboutItem = ({ side, children }) => {
-  const [isSmall] = useMediaQuery('(min-width: 48em)');
-
   return (
     <MotionBox
       initial="hidden"
@@ -35,7 +33,7 @@ const AboutItem = ({ side, children }) => {
       >
         <Icon
           as={
-            !isSmall
+            ['base', 'sm'].includes(useBreakpoint())
               ? ChevronDownIcon
               : side === 'right'
               ? ChevronLeftIcon
