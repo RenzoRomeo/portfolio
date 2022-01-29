@@ -13,13 +13,10 @@ const Project = ({ title, thumbnail, repo, children }) => (
       <HoverBox
         scale={1.05}
         w="100%"
-        borderWidth="1px"
-        borderRadius="lg"
         borderColor={useColorModeValue('blackAlpha.500', 'whiteAlpha.500')}
         overflow="hidden"
       >
         <Image src={thumbnail} alt={title} loading="lazy" placeholder="blur" />
-
         <Box p={6} align="center">
           <Box display="flex" flexDir="column">
             <Box fontSize={30} fontWeight="bold">
