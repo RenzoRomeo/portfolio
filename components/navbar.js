@@ -32,7 +32,6 @@ const Navbar = ({ shouldShow }) => {
       style={{ backdropFilter: 'blur(10px)' }}
       as="nav"
       zIndex={1}
-      ml={10}
     >
       <Container
         maxW="container.xl"
@@ -71,7 +70,7 @@ const Navbar = ({ shouldShow }) => {
         <Box
           w="100%"
           display={{ base: 'inline-block', md: 'none' }}
-          align="left"
+          align="right"
         >
           <Menu>
             <MenuButton
@@ -97,7 +96,7 @@ const Navbar = ({ shouldShow }) => {
           </Menu>
         </Box>
       </Container>
-      <Box p={5} display="inline-block">
+      <Box p={5} position="fixed" top={-1} display="inline-block">
         <ToggleTheme />
       </Box>
     </MotionBox>
