@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Icon, useBreakpoint } from '@chakra-ui/react';
+import { Box, Flex, Text, Icon, useBreakpointValue } from '@chakra-ui/react';
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
@@ -32,13 +32,10 @@ const AboutItem = ({ side, children }) => {
         py={6}
       >
         <Icon
-          as={
-            ['base', 'sm'].includes(useBreakpoint())
-              ? ChevronDownIcon
-              : side === 'right'
-              ? ChevronLeftIcon
-              : ChevronRightIcon
-          }
+          as={useBreakpointValue({
+            base: ChevronDownIcon,
+            md: side === 'right' ? ChevronLeftIcon : ChevronRightIcon
+          })}
           boxSize={75}
           color="green.500"
         />

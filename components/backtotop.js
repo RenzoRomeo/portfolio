@@ -10,14 +10,12 @@ const BackToTop = ({ shouldShow }) => (
       animate={{ opacity: shouldShow ? 1 : 0, scale: shouldShow ? 1 : 0 }}
       initial={{ opacity: 0 }}
       onClick={() => animateScroll.scrollToTop()}
-      w={16}
-      h={16}
+      boxSize="fit-content"
     >
       <ChevronUpIcon
         bgGradient="linear(to-r, #ee0979, #ff6a00)"
         bgClip="icon"
-        w={16}
-        h={16}
+        boxSize={{ base: '100px', md: '50px' }}
         borderRadius="full"
       />
     </HoverBox>

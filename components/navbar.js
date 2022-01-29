@@ -78,6 +78,7 @@ const Navbar = ({ shouldShow }) => {
               icon={<HamburgerIcon />}
               variant="outline"
               aria-label="sections"
+              boxSize={20}
             ></MenuButton>
             <MenuList>
               <SmoothLink section="about">

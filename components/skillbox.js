@@ -9,7 +9,7 @@ const Skillbox = ({ title, children }) => (
       {title}
     </Text>
     <Box>
-      <Stack spacing={5} direction="column">
+      <Stack spacing={5} direction="column" boxSize="fit-content">
         {children.map((item, i) => (
           <HoverBox key={i}>
             <Stack direction="row" align="center">

@@ -1,6 +1,10 @@
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
-import { Box, SimpleGrid, useColorModeValue } from '@chakra-ui/react';
+import {
+  Box,
+  SimpleGrid,
+  useColorModeValue,
+} from '@chakra-ui/react';
 import { Container } from '@chakra-ui/react';
 
 import About from '../components/about';
@@ -31,7 +35,7 @@ export default function Home() {
 
   return (
     <Box
-      w="100%"
+      w={{ base: 'container.md', md: '100vw' }}
       bgGradient={useColorModeValue(
         'linear(to-t, #7F7FD5, #86A8E7, #91EAE4)',
         'linear(to-b, #0f0c29, #302b63)'
