@@ -101,6 +101,7 @@ export default function Home() {
             spacing={10}
             bg="blackAlpha.200"
             p={10}
+            pb={5}
             borderRadius={15}
           >
             <Project

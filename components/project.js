@@ -19,7 +19,7 @@ const Project = ({ title, thumbnail, repo, children }) => (
         <Image src={thumbnail} alt={title} loading="lazy" placeholder="blur" />
         <Box p={6} align="center">
           <Box display="flex" flexDir="column">
-            <Box fontSize={30} fontWeight="bold">
+            <Box fontSize={30}>
               {title}
             </Box>
             <Box fontSize={15} textAlign="justify">
