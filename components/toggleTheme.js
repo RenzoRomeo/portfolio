@@ -25,7 +25,7 @@ const ToggleTheme = () => {
           icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
           borderRadius={5}
           onClick={toggleColorMode}
-          boxSize={{ base: 20, md: 10 }}
+          boxSize={{ base: 10, md: 10 }}
         />
       </motion.div>
     </AnimatePresence>

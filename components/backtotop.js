@@ -15,7 +15,7 @@ const BackToTop = ({ shouldShow }) => (
       <ChevronUpIcon
         bgGradient="linear(to-r, #ee0979, #ff6a00)"
         bgClip="icon"
-        boxSize={{ base: '100px', md: '50px' }}
+        boxSize={{ base: '60px', md: '50px' }}
         borderRadius="full"
       />
     </HoverBox>
