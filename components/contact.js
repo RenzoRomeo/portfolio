@@ -17,6 +17,11 @@ const Contact = () => (
       </a>
     </HoverBox>
     <HoverBox>
+      <a href="mailto:renzoromeo44@gmail.com" target="_blank" rel="noreferrer">
+        <FontAwesomeIcon icon={['fa', 'envelope']} size="4x" />
+      </a>
+    </HoverBox>
+    <HoverBox>
       <a
         href="https://www.linkedin.com/in/renzo-romeo"
         target="_blank"
