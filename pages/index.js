@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { Box, SimpleGrid, useColorModeValue } from '@chakra-ui/react';
 import { Container } from '@chakra-ui/react';
@@ -37,14 +36,6 @@ export default function Home() {
       )}
       pb={15}
     >
-      <Head>
-        <title>Renzo Romeo</title>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1"
-        ></meta>
-      </Head>
-
       <Navbar shouldShow={shouldShow} />
 
       <Presentation id="presentation" />

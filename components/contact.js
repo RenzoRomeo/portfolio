@@ -7,7 +7,7 @@ const Contact = () => (
   <Stack
     direction="row"
     justify="space-around"
-    w="container.sm"
+    w="100%"
     p={5}
     borderRadius={5}
   >
