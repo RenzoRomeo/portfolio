@@ -33,6 +33,9 @@ const Navbar = ({ shouldShow }) => {
       as="nav"
       zIndex={1}
     >
+      <Box p={5} display="inline-block">
+        <ToggleTheme />
+      </Box>
       <Container
         maxW="container.xl"
         bg={{
@@ -97,14 +100,6 @@ const Navbar = ({ shouldShow }) => {
           </Menu>
         </Box>
       </Container>
-      <Box
-        p={5}
-        position="fixed"
-        top={{ base: -1, md: 0 }}
-        display="inline-block"
-      >
-        <ToggleTheme />
-      </Box>
     </MotionBox>
   );
 };
