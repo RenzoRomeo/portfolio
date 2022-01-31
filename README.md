@@ -9,4 +9,4 @@ The main technologies I used for this projects were:
 
 ## Visit the live version
 
-You can check out the live version here: portfolio-renzoromeo.vercel.app
+You can check out the live version here: [a link](portfolio-renzoromeo.vercel.app)
