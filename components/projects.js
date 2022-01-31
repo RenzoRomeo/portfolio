@@ -11,7 +11,6 @@ const Projects = () => (
   <SimpleGrid
     columns={[1, 1, 2]}
     spacing={10}
-    bg="blackAlpha.200"
     p={10}
     pb={5}
     borderRadius={15}

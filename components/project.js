@@ -15,6 +15,8 @@ const Project = ({ title, thumbnail, repo, children }) => (
         w="100%"
         borderColor={useColorModeValue('blackAlpha.500', 'whiteAlpha.500')}
         overflow="hidden"
+        bg="blackAlpha.200"
+        borderRadius={10}
       >
         <Image src={thumbnail} alt={title} loading="lazy" placeholder="blur" />
         <Box p={6} align="center">
