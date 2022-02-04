@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 import Head from 'next/head';
-import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';

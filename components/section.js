@@ -24,7 +24,7 @@ const Section = ({ children, delay = 0.3, from = 'top', ...props }) => (
     align="center"
     p={4}
     borderRadius={5}
-    my={20}
+    my="10vh"
     fontSize={20}
     {...props}
   >
