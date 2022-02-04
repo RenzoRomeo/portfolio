@@ -64,6 +64,7 @@ const Navbar = ({ shouldShow }) => {
           justify="space-between"
           px={5}
           fontSize={22}
+          spacing={10}
         >
           <NavbarButton
             section="about"
