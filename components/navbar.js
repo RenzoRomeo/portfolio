@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   Box,
   Container,
@@ -12,26 +13,34 @@ import { HamburgerIcon } from '@chakra-ui/icons';
 import { motion } from 'framer-motion';
 
 import SmoothLink from './smoothlink';
-import HoverBox from './hoverbox';
 import ToggleTheme from './toggleTheme';
+import NavbarButton from './navbarButton';
 
-const MotionBox = motion(Box);
+const MotionStack = motion(Stack);
 
 const Navbar = ({ shouldShow }) => {
+  const [pressed, setPressed] = useState('about');
+  const handleClick = section => {
+    setPressed(section);
+  };
+
   return (
-    <MotionBox
+    <MotionStack
       animate={{
         opacity: shouldShow ? 1 : 0,
         scaleY: shouldShow ? 1 : 0
       }}
       transition={{ duration: 0.2 }}
       initial={{ opacity: 0 }}
-      w="100%"
       position="fixed"
+      direction={{ base: 'row', md: 'column' }}
+      h={{ base: 'fit-content', md: '100%' }}
+      w={{ base: '100%', md: 'fit-content' }}
       display="flex"
       style={{ backdropFilter: 'blur(10px)' }}
       as="nav"
       zIndex={1}
+      align="center"
     >
       <Box p={5} display="inline-block">
         <ToggleTheme />
@@ -50,24 +59,36 @@ const Navbar = ({ shouldShow }) => {
         borderRadius={10}
       >
         <Stack
-          direction={{ base: 'column', md: 'row' }}
+          direction="column"
           display={{ base: 'none', md: 'flex' }}
           justify="space-between"
           px={5}
           fontSize={22}
         >
-          <HoverBox>
-            <SmoothLink section="about">About Me</SmoothLink>
-          </HoverBox>
-          <HoverBox>
-            <SmoothLink section="skills">Skills</SmoothLink>
-          </HoverBox>
-          <HoverBox>
-            <SmoothLink section="projects">Projects</SmoothLink>
-          </HoverBox>
-          <HoverBox>
-            <SmoothLink section="contact">Contact Me</SmoothLink>
-          </HoverBox>
+          <NavbarButton
+            section="about"
+            onClick={handleClick}
+            pressed={pressed}
+            title="About Me"
+          />
+          <NavbarButton
+            section="skills"
+            onClick={handleClick}
+            pressed={pressed}
+            title="My Skills"
+          />
+          <NavbarButton
+            section="projects"
+            onClick={handleClick}
+            pressed={pressed}
+            title="My Projects"
+          />
+          <NavbarButton
+            section="contact"
+            onClick={handleClick}
+            pressed={pressed}
+            title="Contact Me"
+          />
         </Stack>
 
         <Box
@@ -100,7 +121,7 @@ const Navbar = ({ shouldShow }) => {
           </Menu>
         </Box>
       </Container>
-    </MotionBox>
+    </MotionStack>
   );
 };
 
