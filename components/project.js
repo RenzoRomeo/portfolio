@@ -16,12 +16,12 @@ const Project = ({ title, thumbnail, repo, children }) => (
         borderColor={useColorModeValue('blackAlpha.500', 'whiteAlpha.500')}
         overflow="hidden"
         bg="blackAlpha.200"
-        borderRadius={10}
+        borderRadius={5}
       >
         <Image src={thumbnail} alt={title} loading="lazy" placeholder="blur" />
         <Box p={6} align="center">
           <Box display="flex" flexDir="column">
-            <Box fontSize={30}>
+            <Box fontSize={30} fontWeight="bold">
               {title}
             </Box>
             <Box fontSize={15} textAlign="justify">
