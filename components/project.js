@@ -30,7 +30,7 @@ const Project = ({ title, thumbnail, link, tags }) => (
             loading="lazy"
             placeholder="blur"
             width={1920}
-            height={1080}
+            height={975}
           />
           <Box p={6} align="center">
             <Box display="flex" flexDir="column">

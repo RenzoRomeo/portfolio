@@ -2,6 +2,7 @@ import { SimpleGrid } from '@chakra-ui/react';
 
 import Project from './project';
 
+import ticTacToeThumb from '../public/images/projects/tictactoe.png';
 import chatThumb from '../public/images/projects/chat.png';
 import ecommerceThumb from '../public/images/projects/ecommerce.png';
 import huluThumb from '../public/images/projects/hulu.png';
@@ -12,6 +13,12 @@ import raycasterThumb from '../public/images/projects/raycaster.png';
 const Projects = () => (
   <SimpleGrid columns={[1, 1, 2]} spacing={10} p={10} pb={5} borderRadius={15}>
     <Project
+      title="Multiplayer Tic-Tac-Toe"
+      thumbnail={ticTacToeThumb}
+      link="https://tic-tac-toe-renzoromeo.vercel.app/"
+      tags={['Typescript', 'Chakra UI', 'Socket.io']}
+    ></Project>
+    <Project
       title="Real Time Chat App"
       thumbnail={chatThumb}
       link="https://github.com/RenzoRomeo/chat-app-next"
@@ -20,7 +27,7 @@ const Projects = () => (
     <Project
       title="Ecommerce Site"
       thumbnail={ecommerceThumb}
-      link="https://github.com/RenzoRomeo/ecommerce"
+      link="https://ecommerce-renzoromeo.vercel.app/"
       tags={['Typescript', 'Next.js', 'Chakra UI', 'Redux']}
     ></Project>
     <Project
