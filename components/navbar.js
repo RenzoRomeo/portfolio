@@ -19,7 +19,7 @@ import NavbarButton from './navbarButton';
 const MotionStack = motion(Stack);
 
 const Navbar = ({ shouldShow }) => {
-  const [pressed, setPressed] = useState('about');
+  const [pressed, setPressed] = useState('projects');
   const handleClick = section => {
     setPressed(section);
   };
@@ -67,6 +67,12 @@ const Navbar = ({ shouldShow }) => {
           spacing={10}
         >
           <NavbarButton
+            section="projects"
+            onClick={handleClick}
+            pressed={pressed}
+            title="My Projects"
+          />
+          <NavbarButton
             section="about"
             onClick={handleClick}
             pressed={pressed}
@@ -77,12 +83,6 @@ const Navbar = ({ shouldShow }) => {
             onClick={handleClick}
             pressed={pressed}
             title="My Skills"
-          />
-          <NavbarButton
-            section="projects"
-            onClick={handleClick}
-            pressed={pressed}
-            title="My Projects"
           />
           <NavbarButton
             section="contact"
@@ -106,18 +106,11 @@ const Navbar = ({ shouldShow }) => {
               boxSize={10}
             ></MenuButton>
             <MenuList>
-              <SmoothLink section="about">
-                <MenuItem>About</MenuItem>
-              </SmoothLink>
-              <SmoothLink section="skills">
-                <MenuItem>Skills</MenuItem>
-              </SmoothLink>
-              <SmoothLink section="projects">
-                <MenuItem>Projects</MenuItem>
-              </SmoothLink>
-              <SmoothLink section="contact">
-                <MenuItem>Contact</MenuItem>
-              </SmoothLink>
+              {['Projects', 'About', 'Skills', 'Contact'].map(section => (
+                <SmoothLink key={section} section={section.toLowerCase()}>
+                  <MenuItem>{section}</MenuItem>
+                </SmoothLink>
+              ))}
             </MenuList>
           </Menu>
         </Box>

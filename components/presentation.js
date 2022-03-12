@@ -16,7 +16,7 @@ const Presentation = () => (
     </Text>
 
     <HoverBox>
-      <SmoothLink section="about">
+      <SmoothLink section="projects">
         <ChevronDownIcon cursor="pointer" />
       </SmoothLink>
     </HoverBox>

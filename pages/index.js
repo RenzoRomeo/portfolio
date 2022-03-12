@@ -41,6 +41,13 @@ export default function Home() {
       <Presentation id="presentation" />
 
       <Container maxW="container.xl" align="center">
+        <Section id="projects">
+          <Title as="h1" fontSize={50} mb={20}>
+            Projects
+          </Title>
+          <Projects />
+        </Section>
+
         <SimpleGrid columns={[1, 1, 2]} boxSize="fit-content">
           <Section id="about" from="left" h="100%">
             <Title>About Me</Title>
@@ -54,13 +61,6 @@ export default function Home() {
             <SkillsList />
           </Section>
         </SimpleGrid>
-
-        <Section id="projects">
-          <Title as="h1" fontSize={50} mb={20}>
-            Projects
-          </Title>
-          <Projects />
-        </Section>
 
         <Section id="contact">
           <Title as="h1" mb={20} fontSize={50}>
