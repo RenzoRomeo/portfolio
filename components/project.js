@@ -1,37 +1,53 @@
 import Image from 'next/image';
-import { Box, LinkBox, useColorModeValue } from '@chakra-ui/react';
+import Link from 'next/link';
+import {
+  Box,
+  LinkBox,
+  LinkOverlay,
+  useColorModeValue,
+  Stack,
+  Badge
+} from '@chakra-ui/react';
 
 import HoverBox from './hoverbox';
 
-const Project = ({ title, thumbnail, repo, children }) => (
-  <a
-    href={`https://github.com/RenzoRomeo/${repo}`}
-    target="_blank"
-    rel="noreferrer"
-  >
-    <LinkBox cursor="pointer">
-      <HoverBox
-        scale={1.05}
-        w="100%"
-        borderColor={useColorModeValue('blackAlpha.500', 'whiteAlpha.500')}
-        overflow="hidden"
-        bg="blackAlpha.200"
-        borderRadius={5}
-      >
-        <Image src={thumbnail} alt={title} loading="lazy" placeholder="blur" />
-        <Box p={6} align="center">
-          <Box display="flex" flexDir="column">
-            <Box fontSize={30} fontWeight="bold">
-              {title}
-            </Box>
-            <Box fontSize={15} textAlign="justify">
-              {children}
+const Project = ({ title, thumbnail, link, tags }) => (
+  <LinkBox cursor="pointer">
+    <Link passHref href={link}>
+      <LinkOverlay>
+        <HoverBox
+          scale={1.05}
+          w="100%"
+          borderColor={useColorModeValue('blackAlpha.500', 'whiteAlpha.500')}
+          overflow="hidden"
+          bg="blackAlpha.200"
+          borderRadius={5}
+        >
+          <Image
+            unoptimized
+            src={thumbnail}
+            alt={title}
+            loading="lazy"
+            placeholder="blur"
+            width={1920}
+            height={1080}
+          />
+          <Box p={6} align="center">
+            <Box display="flex" flexDir="column">
+              <Box fontSize={30} fontWeight="bold">
+                {title}
+              </Box>
+              <Stack direction="row" justify="center" mt="1rem">
+                {tags && tags.map(tag => (
+                  <Badge key={tag}>{tag}</Badge>
+                ))}
+              </Stack>
             </Box>
           </Box>
-        </Box>
-      </HoverBox>
-    </LinkBox>
-  </a>
+        </HoverBox>
+      </LinkOverlay>
+    </Link>
+  </LinkBox>
 );
 
 export default Project;
